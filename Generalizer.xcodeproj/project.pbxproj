@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DA5B87D14B230A900A4A8AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA5B87C14B230A900A4A8AA /* Cocoa.framework */; };
+		0DA5B87F14B230A900A4A8AA /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA5B87E14B230A900A4A8AA /* Quartz.framework */; };
+		0DA5B88B14B230A900A4A8AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5B88914B230A900A4A8AA /* InfoPlist.strings */; };
+		0DA5B88E14B230A900A4A8AA /* GeneralizerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5B88D14B230A900A4A8AA /* GeneralizerPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0DA5B87914B230A900A4A8AA /* Generalizer.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Generalizer.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DA5B87C14B230A900A4A8AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0DA5B87E14B230A900A4A8AA /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		0DA5B88114B230A900A4A8AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0DA5B88214B230A900A4A8AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0DA5B88314B230A900A4A8AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0DA5B88814B230A900A4A8AA /* Generalizer-Info.plist */ = {isa = PBXFileReference; path = "Generalizer-Info.plist"; sourceTree = "<group>"; };
+		0DA5B88A14B230A900A4A8AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0DA5B88C14B230A900A4A8AA /* GeneralizerPlugin.h */ = {isa = PBXFileReference; path = GeneralizerPlugin.h; sourceTree = "<group>"; };
+		0DA5B88D14B230A900A4A8AA /* GeneralizerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralizerPlugin.m; sourceTree = "<group>"; };
+		0DA5B88F14B230A900A4A8AA /* Generalizer-Prefix.pch */ = {isa = PBXFileReference; path = "Generalizer-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DA5B87514B230A900A4A8AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DA5B87D14B230A900A4A8AA /* Cocoa.framework in Frameworks */,
+				0DA5B87F14B230A900A4A8AA /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DA5B86D14B230A900A4A8AA = {
+			isa = PBXGroup;
+			children = (
+				0DA5B88614B230A900A4A8AA /* Generalizer */,
+				0DA5B87B14B230A900A4A8AA /* Frameworks */,
+				0DA5B87A14B230A900A4A8AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0DA5B87A14B230A900A4A8AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5B87914B230A900A4A8AA /* Generalizer.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0DA5B87B14B230A900A4A8AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5B87C14B230A900A4A8AA /* Cocoa.framework */,
+				0DA5B87E14B230A900A4A8AA /* Quartz.framework */,
+				0DA5B88014B230A900A4A8AA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0DA5B88014B230A900A4A8AA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5B88114B230A900A4A8AA /* AppKit.framework */,
+				0DA5B88214B230A900A4A8AA /* CoreData.framework */,
+				0DA5B88314B230A900A4A8AA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0DA5B88614B230A900A4A8AA /* Generalizer */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5B88C14B230A900A4A8AA /* GeneralizerPlugin.h */,
+				0DA5B88D14B230A900A4A8AA /* GeneralizerPlugin.m */,
+				0DA5B88714B230A900A4A8AA /* Supporting Files */,
+			);
+			path = Generalizer;
+			sourceTree = "<group>";
+		};
+		0DA5B88714B230A900A4A8AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5B88814B230A900A4A8AA /* Generalizer-Info.plist */,
+				0DA5B88914B230A900A4A8AA /* InfoPlist.strings */,
+				0DA5B88F14B230A900A4A8AA /* Generalizer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0DA5B87814B230A900A4A8AA /* Generalizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DA5B89214B230A900A4A8AA /* Build configuration list for PBXNativeTarget "Generalizer" */;
+			buildPhases = (
+				0DA5B87414B230A900A4A8AA /* Sources */,
+				0DA5B87514B230A900A4A8AA /* Frameworks */,
+				0DA5B87614B230A900A4A8AA /* Resources */,
+				0DA5B87714B230A900A4A8AA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Generalizer;
+			productName = Generalizer;
+			productReference = 0DA5B87914B230A900A4A8AA /* Generalizer.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0DA5B86F14B230A900A4A8AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 0DA5B87214B230A900A4A8AA /* Build configuration list for PBXProject "Generalizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0DA5B86D14B230A900A4A8AA;
+			productRefGroup = 0DA5B87A14B230A900A4A8AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DA5B87814B230A900A4A8AA /* Generalizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DA5B87614B230A900A4A8AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DA5B88B14B230A900A4A8AA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DA5B87714B230A900A4A8AA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/Generalizer.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/Generalizer.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DA5B87414B230A900A4A8AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DA5B88E14B230A900A4A8AA /* GeneralizerPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0DA5B88914B230A900A4A8AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DA5B88A14B230A900A4A8AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0DA5B89014B230A900A4A8AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0DA5B89114B230A900A4A8AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0DA5B89314B230A900A4A8AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Generalizer/Generalizer-Prefix.pch";
+				INFOPLIST_FILE = "Generalizer/Generalizer-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		0DA5B89414B230A900A4A8AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Generalizer/Generalizer-Prefix.pch";
+				INFOPLIST_FILE = "Generalizer/Generalizer-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DA5B87214B230A900A4A8AA /* Build configuration list for PBXProject "Generalizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DA5B89014B230A900A4A8AA /* Debug */,
+				0DA5B89114B230A900A4A8AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DA5B89214B230A900A4A8AA /* Build configuration list for PBXNativeTarget "Generalizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DA5B89314B230A900A4A8AA /* Debug */,
+				0DA5B89414B230A900A4A8AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0DA5B86F14B230A900A4A8AA /* Project object */;
+}
