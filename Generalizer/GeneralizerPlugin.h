@@ -22,6 +22,6 @@ You can access their values in the appropriate plug-in methods using self.inputF
 
 @property NSUInteger inputMode;
 
-@property NSArray* outputs;
+@property (retain) NSArray* outputs;
 
 @end

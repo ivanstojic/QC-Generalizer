@@ -166,7 +166,8 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
         }
     }
     
-    self.outputs = a;
+    [self setOutputs:a];
+    [a release];
 	
 	return YES;
 }
