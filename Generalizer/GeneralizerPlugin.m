@@ -12,7 +12,7 @@
 #import "GeneralizerPlugIn.h"
 
 #define	kQCPlugIn_Name				@"Generalizer"
-#define	kQCPlugIn_Description		@"Generalizer description"
+#define	kQCPlugIn_Description		@"Generalizer twiddles a flexible number of outputs..."
 
 @implementation GeneralizerPlugIn
 
@@ -20,6 +20,13 @@
 Here you need to declare the input / output properties as dynamic as Quartz Composer will handle their implementation
 @dynamic inputFoo, outputBar;
 */
+
+@dynamic inputNumberOfPorts;
+@dynamic inputNumberOfActive;
+
+@dynamic inputMode;
+
+@dynamic outputs;
 
 + (NSDictionary *)attributes
 {
@@ -35,6 +42,14 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	/*
 	Specify the optional attributes for property based ports (QCPortAttributeNameKey, QCPortAttributeDefaultValueKey...).
 	*/
+    
+    if ([key isEqualToString:@"inputMode"]) {
+        return [NSDictionary dictionaryWithObjectsAndKeys:
+                [NSNumber numberWithInt:0], QCPortAttributeMinimumValueKey,
+                [NSArray arrayWithObjects:@"All off", @"All on", @"Sequential", @"Random", nil], QCPortAttributeMenuItemsKey,
+                [NSNumber numberWithInt:3], QCPortAttributeMaximumValueKey,
+                nil];
+    }
 	
 	return nil;
 }
@@ -45,7 +60,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	Return the execution mode of the plug-in: kQCPlugInExecutionModeProvider, kQCPlugInExecutionModeProcessor, or kQCPlugInExecutionModeConsumer.
 	*/
 	
-	return kQCPlugInExecutionModeProcessor;
+	return kQCPlugInExecutionModeProvider;
 }
 
 + (QCPlugInTimeMode)timeMode
@@ -54,7 +69,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	Return the time dependency mode of the plug-in: kQCPlugInTimeModeNone, kQCPlugInTimeModeIdle or kQCPlugInTimeModeTimeBase.
 	*/
 	
-	return kQCPlugInTimeModeNone;
+	return kQCPlugInTimeModeTimeBase;
 }
 
 - (id)init
@@ -110,6 +125,48 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	The OpenGL context for rendering can be accessed and defined for CGL macros using:
 	CGLContextObj cgl_ctx = [context CGLContextObj];
 	*/
+    
+
+    NSMutableArray *a = [[NSMutableArray alloc] init];
+    
+    if (self.inputMode == 0) {
+        for (int i = 0; i < self.inputNumberOfPorts; i++) {
+            [a addObject:[NSNumber numberWithInt:0]];
+        }
+        
+    } else if (self.inputMode == 1) {
+        for (int i = 0; i < self.inputNumberOfPorts; i++) {
+            [a addObject:[NSNumber numberWithInt:1]];
+        }
+        
+    } else if (self.inputMode == 2) {
+        int start = fmod(time, self.inputNumberOfPorts);
+        
+        for (int i = 0; i < self.inputNumberOfPorts; i++) {
+            int value = (i > start && i <= start + self.inputNumberOfActive) ||
+                (start + self.inputNumberOfActive >= self.inputNumberOfPorts && i <= fmod(start + self.inputNumberOfActive, self.inputNumberOfPorts)) ? 1 : 0;
+            [a addObject:[NSNumber numberWithInt:value]];            
+        }
+    } else if (self.inputMode == 3) {
+        srandom(time);
+        
+        for (int i = 0; i < self.inputNumberOfPorts; i++ ) {
+            [a addObject:[NSNumber numberWithInt:0]];            
+        }
+        
+        int f = self.inputNumberOfActive;
+        
+        while (f > 0) {
+            int r = fmod(random(), self.inputNumberOfPorts);
+            
+            if ([[a objectAtIndex:r] isEqualToNumber:[NSNumber numberWithInt:0]]) {
+                f--;
+                [a replaceObjectAtIndex:r withObject:[NSNumber numberWithInt:1]];
+            }
+        }
+    }
+    
+    self.outputs = a;
 	
 	return YES;
 }

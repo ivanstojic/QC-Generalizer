@@ -20,11 +20,11 @@
 		0DA5B88114B230A900A4A8AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0DA5B88214B230A900A4A8AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0DA5B88314B230A900A4A8AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0DA5B88814B230A900A4A8AA /* Generalizer-Info.plist */ = {isa = PBXFileReference; path = "Generalizer-Info.plist"; sourceTree = "<group>"; };
+		0DA5B88814B230A900A4A8AA /* Generalizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Generalizer-Info.plist"; sourceTree = "<group>"; };
 		0DA5B88A14B230A900A4A8AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0DA5B88C14B230A900A4A8AA /* GeneralizerPlugin.h */ = {isa = PBXFileReference; path = GeneralizerPlugin.h; sourceTree = "<group>"; };
+		0DA5B88C14B230A900A4A8AA /* GeneralizerPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralizerPlugin.h; sourceTree = "<group>"; };
 		0DA5B88D14B230A900A4A8AA /* GeneralizerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralizerPlugin.m; sourceTree = "<group>"; };
-		0DA5B88F14B230A900A4A8AA /* Generalizer-Prefix.pch */ = {isa = PBXFileReference; path = "Generalizer-Prefix.pch"; sourceTree = "<group>"; };
+		0DA5B88F14B230A900A4A8AA /* Generalizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Generalizer-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +197,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -213,9 +213,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -223,7 +223,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -233,20 +233,22 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
 		0DA5B89314B230A900A4A8AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Generalizer/Generalizer-Prefix.pch";
 				INFOPLIST_FILE = "Generalizer/Generalizer-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Debug;
@@ -254,12 +256,14 @@
 		0DA5B89414B230A900A4A8AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Generalizer/Generalizer-Prefix.pch";
 				INFOPLIST_FILE = "Generalizer/Generalizer-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Release;
@@ -283,6 +287,7 @@
 				0DA5B89414B230A900A4A8AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

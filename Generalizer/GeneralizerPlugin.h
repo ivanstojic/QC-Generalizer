@@ -17,4 +17,11 @@ Declare here the properties to be used as input and output ports for the plug-in
 You can access their values in the appropriate plug-in methods using self.inputFoo or self.inputBar
 */
 
+@property double inputNumberOfPorts;
+@property double inputNumberOfActive;
+
+@property NSUInteger inputMode;
+
+@property NSArray* outputs;
+
 @end
